@@ -42,6 +42,7 @@ set shiftwidth=2			" And again related.
 set laststatus=2			" Show the status line all the time.
 "set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
+let macvim_skip_colorscheme=1
 colorscheme darkZ
 
 " Get off my lawn

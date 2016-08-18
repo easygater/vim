@@ -22,9 +22,12 @@ set wildmode=list:longest		" Complete files like a shell
 
 set ignorecase							" Case-insensitive searching.
 set smartcase								" But case-sensitive if expression contains capital letter.
+set hlsearch								" Enables highligting for search
 
 set number									" Show line numbers.
 set ruler										" Show cursor position.
+
+"set clipboard=unnamed				" Set the clipboard to exchange with outside of vim
 
 set title										" Set the terminal's title.
 
@@ -62,3 +65,10 @@ map <C-n> :NERDTreeToggle<CR>
 "map <leader>tf :tabfirst<cr>
 "map <leader>tl :tablast<cr>
 "map <leader>tm :tabmove
+
+" Mappings for simple line copy/paste
+nmap <F1> :.w !pbcopy<CR><CR>
+vmap <F1> :w !pbcopy<CR><CR>
+nmap <F2> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+imap <F2> <ESC>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+
